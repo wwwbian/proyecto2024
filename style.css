@@ -29,7 +29,48 @@ body{
 
 .footer{
     display: flex;
+    text-align: center;
     background-color: rgb(66, 184, 66);
     margin-top: 5%;
     justify-content: right;
+}
+
+img {
+    max-width: 100%;
+    transition: filter 0.5s ease;
+}
+
+.columna {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.elementos {
+    width: calc(25% - 20px); /* Ajustar según el número de columnas */
+    margin: 10px;
+    overflow: hidden; /* Para ocultar el contenido que se desvanece */
+    transition: height 0.5s ease, padding 0.5s ease; /* Transiciones suaves de altura y relleno */
+}
+
+
+.elementos {
+    width: calc(25% - 20px); /* Ajustar según el número de columnas */
+    margin: 10px;
+    overflow: hidden; /* Para ocultar el contenido que se desvanece */
+    transition: height 0.5s ease, padding 0.5s ease; /* Transiciones suaves de altura y relleno */
+}
+
+.elementos img {
+    max-width: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones suaves de opacidad y transformación */
+}
+
+.blur {
+    filter: blur(3px); /* Desenfoque para indicar selección */
+}
+
+.hide {
+    opacity: 0;
+    transform: scale(0);
 }
