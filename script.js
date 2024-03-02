@@ -22,8 +22,7 @@ elementos.forEach(function(elemento) {
         if (seleccionadas.length === 2 && seleccionadas[0] === seleccionadas[1]) {
             // Agregar animación para desaparecer las imágenes
             document.querySelectorAll(`.${seleccionadas[0]}`).forEach(function(img) {
-                img.parentElement.style.height = '0'; // Ajustar la altura del contenedor a 0
-                img.parentElement.style.padding = '0'; // Eliminar el espacio del contenedor
+                img.style.display = 'none'; // Ocultar la imagen
             });
 
             // Limpiar el array de imágenes seleccionadas después de un breve retraso para permitir que termine la animación
@@ -33,6 +32,8 @@ elementos.forEach(function(elemento) {
         }
     });
 });
+
+
 
 
 
