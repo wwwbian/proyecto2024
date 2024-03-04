@@ -48,7 +48,7 @@ function manejarClic(elementos, elementoClicado) {
             const elementoClicado = event.target.closest('.elementos');
             if (elementoClicado) {
                 tipoElementoColumna1 = elementoClicado.id; // Asumimos que la id del elemento es el tipo de material
-                mostrarAlerta(`Has hecho clik en la materia prima: ${tipoElementoColumna1}, la materia prima no coiside con el producto: ${tipoElementoColumna2}. VUELVE A INTENTAR`);
+                mostrarAlerta(`Has hecho clik en la materia prima: ${tipoElementoColumna2}, la materia prima no coiside con el producto: ${tipoElementoColumna1}. VUELVE A INTENTAR`);
             }
         });
     
