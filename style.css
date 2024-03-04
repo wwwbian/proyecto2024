@@ -1,10 +1,10 @@
-
 body{
     background-color: #a8c9aa;
 }
 
 .navbar{
     display: flex;
+    font-size: 25px;
     background-color: rgb(66, 184, 66);
     height: 50px;
     justify-content: center;
@@ -20,6 +20,7 @@ body{
 .footer{
     display: flex;
     text-align: center;
+    font-size: 25px;
     font-family:'Times New Roman', Times, serif;
     background-color: rgb(66, 184, 66);
     margin-top: 7%;
