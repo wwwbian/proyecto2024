@@ -30,4 +30,30 @@ function manejarClic(elementos, elementoClicado) {
     elementoClicado.classList.remove('blur');
 }
 
+    document.addEventListener('DOMContentLoaded', function () {
+        let tipoElementoColumna1 = "";
+        let tipoElementoColumna2 = "";
+    
+        const columna1 = document.querySelector('.columna1');
+        const columna2 = document.querySelector('.columna2');
+
+        columna2.addEventListener('click', function (event) {
+            const elementoClicado = event.target.closest('.elementos2');
+            if (elementoClicado) {
+                tipoElementoColumna2 = elementoClicado.id; // Asumimos que la id del elemento es el tipo de material
+            }
+        });
+
+        columna1.addEventListener('click', function (event) {
+            const elementoClicado = event.target.closest('.elementos');
+            if (elementoClicado) {
+                tipoElementoColumna1 = elementoClicado.id; // Asumimos que la id del elemento es el tipo de material
+                mostrarAlerta(`Has hecho clik en la materia prima: ${tipoElementoColumna1}, la materia prima no coiside con el producto: ${tipoElementoColumna2}. VUELVE A INTENTAR`);
+            }
+        });
+    
+        function mostrarAlerta(texto) {
+            alert(texto);
+        }
+    });
 
