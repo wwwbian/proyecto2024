@@ -41,6 +41,7 @@ function manejarClic(elementos, elementoClicado) {
             const elementoClicado = event.target.closest('.elementos2');
             if (elementoClicado) {
                 tipoElementoColumna2 = elementoClicado.id; // Asumimos que la id del elemento es el tipo de material
+                
             }
         });
 
@@ -48,10 +49,10 @@ function manejarClic(elementos, elementoClicado) {
             const elementoClicado = event.target.closest('.elementos');
             if (elementoClicado) {
                 tipoElementoColumna1 = elementoClicado.id; // Asumimos que la id del elemento es el tipo de material
-                mostrarAlerta(`Has hecho clik en la materia prima: ${tipoElementoColumna2}, la materia prima no coiside con el producto: ${tipoElementoColumna1}. VUELVE A INTENTAR`);
+                mostrarAlerta('toca primero la columna de la izquierda con las materias primas');
             }
         });
-    
+        
         function mostrarAlerta(texto) {
             alert(texto);
         }
