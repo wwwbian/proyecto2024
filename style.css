@@ -51,11 +51,6 @@ img {
     margin-top: -67%;
  }
 
-.elementos img {
-    max-height: 100%;
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones suaves de opacidad y transformación */
-}
-
 .blur {
     filter:blur(2px); /* Desenfoque para indicar selección */
 }
