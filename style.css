@@ -52,7 +52,7 @@ img {
  }
 
 .blur {
-    filter:blur(2px); /* Desenfoque para indicar selección */
+    filter:blur(4px); /* Desenfoque para indicar selección */
 }
 
 
