@@ -34,13 +34,22 @@ img {
     
 }
 
-.columna {
-    display: flex;
-    flex-direction: column; /* Apila las imágenes verticalmente */
-    margin-left: 70px;
-    margin-right: 70px;
-    
+.columna1{
+    display:block;
+    width: 20%;
+    margin: 5% auto;
+    font-weight: 100px;
+    margin-right: 15%;
+    margin-top: 5%;
 }
+
+.columna2{
+    display: block;
+    width: 20%;
+    margin: 5% auto;
+    margin-left: 15%;
+    margin-top: -67%;
+ }
 
 .elementos img {
     max-height: 100%;
