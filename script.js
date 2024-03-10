@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (elementoClicado) {
             tipoElementoColumna1 = elementoClicado.id;
             if (!clicEnColumna2) {
-                mostrarAlerta('Toca primero la columna de la izquierda con las materias primas');
+                mostrarAlerta('Toca primero la columna de la derecha con las materias primas');
             } else {
 
                 if (tipoElementoColumna2 != tipoElementoColumna1) {
