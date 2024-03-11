@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (elementoClicado) {
             tipoElementoColumna1 = elementoClicado.id;
             if (!clicEnColumna2) {
-                mostrarAlerta('Toca primero la columna de la derecha con las materias primas');
+                mostrarAlerta('Toca primero la columna de la derecha con el elemento');
             } else {
 
                 if (tipoElementoColumna2 != tipoElementoColumna1) {
-                    mostrarAlerta(`Has hecho clik en la materia prima: ${tipoElementoColumna2}, la materia prima no coiside con el producto: ${tipoElementoColumna1}. VUELVE A INTENTAR`);
+                    mostrarAlerta(`Has hecho clik en la materia prima: "${tipoElementoColumna2}", El elemento no coincide con el otro elemento seleccionado: "${tipoElementoColumna1}". VUELVE A INTENTAR`);
                 }else {
 
                     if (tipoElementoColumna2 === tipoElementoColumna1) {
