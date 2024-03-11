@@ -1,6 +1,8 @@
 const imagenes = document.querySelectorAll('.elementos img');
 const imagenes2 = document.querySelectorAll('.elementos2 img');
 
+let errores = 0; // Inicializar el contador de errores
+let aciertos = 0;
 
 imagenes2.forEach(function(imagen2) {
     imagen2.addEventListener('click', function() {
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-     columna1.addEventListener('click', function (event) {
+    columna1.addEventListener('click', function (event) {
         const elementoClicado = event.target.closest('.elementos');
         if (elementoClicado) {
             tipoElementoColumna1 = elementoClicado.id;
@@ -53,14 +55,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (tipoElementoColumna2 != tipoElementoColumna1) {
                     mostrarAlerta(`Has hecho clik en la materia prima: "${tipoElementoColumna2}", El elemento no coincide con el otro elemento seleccionado: "${tipoElementoColumna1}". VUELVE A INTENTAR`);
-                }else {
+                    errores++; // Incrementar el contador de errores
+                    document.getElementById('contador').textContent = errores; // Actualizar el contador en el DOM
+                } else {
 
                     if (tipoElementoColumna2 === tipoElementoColumna1) {
                         eliminarElementos('.elementos', tipoElementoColumna1);
                         eliminarElementos('.elementos2', tipoElementoColumna2);
+                        mostrarAlerta("ACERTASTE");
+                        aciertos++;
+                        document.getElementById('contadorr').textContent = aciertos; // Actualizar el contador en el DOM
                     }
                 }
-            } 
+            }
         }
     });
 
@@ -73,15 +80,15 @@ const columnas = document.querySelectorAll('.columna1, .columna2');
 
 
 function verificarElementos() {
-  let todasVacias = true;
-  columnas.forEach(columna => {
-    if (columna.querySelectorAll('.elementos').length > 0) {
-      todasVacias = false;
+    let todasVacias = true;
+    columnas.forEach(columna => {
+        if (columna.querySelectorAll('.elementos').length > 0) {
+            todasVacias = false;
+        }
+    });
+    if (todasVacias) {
+        alert('GANASTE');
     }
-  });
-  if (todasVacias) {
-    alert('GANASTE');
-  }
 }
 
 // Llamar a la función inicialmente
@@ -89,7 +96,7 @@ verificarElementos();
 
 // Escuchar el evento de eliminación de elementos
 columnas.forEach(columna => {
-  columna.addEventListener('DOMNodeRemoved', () => {
-    verificarElementos();
-  });
+    columna.addEventListener('DOMNodeRemoved', () => {
+        verificarElementos();
+    });
 });
