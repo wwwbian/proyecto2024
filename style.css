@@ -46,4 +46,8 @@ img {
     filter:blur(4px); /* Desenfoque para indicar selección */
 }
 
+.texto{
+display: flex; 
+justify-content: center;
+}
 
