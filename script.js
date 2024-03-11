@@ -68,3 +68,28 @@ document.addEventListener('DOMContentLoaded', function () {
         alert(texto);
     }
 });
+
+const columnas = document.querySelectorAll('.columna1, .columna2');
+
+
+function verificarElementos() {
+  let todasVacias = true;
+  columnas.forEach(columna => {
+    if (columna.querySelectorAll('.elementos').length > 0) {
+      todasVacias = false;
+    }
+  });
+  if (todasVacias) {
+    alert('GANASTE');
+  }
+}
+
+// Llamar a la función inicialmente
+verificarElementos();
+
+// Escuchar el evento de eliminación de elementos
+columnas.forEach(columna => {
+  columna.addEventListener('DOMNodeRemoved', () => {
+    verificarElementos();
+  });
+});
