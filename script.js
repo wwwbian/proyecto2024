@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
 
                 if (tipoElementoColumna2 != tipoElementoColumna1) {
-                    mostrarAlerta(`Has hecho clik en la materia prima: "${tipoElementoColumna2}", El elemento no coincide con el otro elemento seleccionado: "${tipoElementoColumna1}". VUELVE A INTENTAR`);
+                    mostrarAlerta(`Has hecho clik en el elemento que esta fabricado con: "${tipoElementoColumna2}" y no coincide con el otro elemento seleccionado que esta hecho con: "${tipoElementoColumna1}". VUELVE A INTENTAR`);
                     errores++; // Incrementar el contador de errores
                     document.getElementById('contador').textContent = errores; // Actualizar el contador en el DOM
                 } else {

@@ -1,45 +1,55 @@
-body{
+body {
     background-color: #a8c9aa;
+    margin: 0; /* Quitamos el margen predeterminado del body */
+    font-size: 16px; /* Establecemos un tamaño de fuente base */
 }
 
-.navbar{
+.navbar {
     display: flex;
-    font-size: 25px;
+    font-size: 2rem; /* Cambiamos a unidades relativas para mejor escalabilidad */
     background-color: rgb(66, 184, 66);
     height: 50px;
     justify-content: center;
+    align-items: center; /* Alineamos verticalmente */
 }
 
-.footer{
+.footer {
     display: flex;
     text-align: center;
-    font-size: 25px;
-    font-family:'Times New Roman', Times, serif;
+    font-size: 1rem; /* Cambiamos a unidades relativas */
+    font-family: 'Times New Roman', Times, serif;
     background-color: rgb(66, 184, 66);
-    padding: 10px;
+    padding: 1%;
     justify-content: center;
+    align-items: center; /* Alineamos verticalmente */
 }
 
-img {
-    max-height: 50%;
-    cursor: pointer;
-    
-}
-
-.conteiner{
+.conteiner {
     display: flex;
-    justify-content: space-between;
-    width: 80%; /* Ajusta el ancho según sea necesario */
+    flex-wrap: wrap; /* Permitimos que los elementos se envuelvan */
+    justify-content: center; /* Centramos horizontalmente */
+    width: 90%; /* Ajusta el ancho según sea necesario */
     margin: 0 auto; /* Centra el contenedor */
+    padding-top: 20px; /* Agregamos espacio superior */
 }
 
 .columna1,
 .columna2 {
-    display: block;
-    width: 45%; /* Ajusta el ancho según sea necesario */
-    font-weight: 20%;
-    margin-top: 5%;
-    margin-left: 15%;
+    flex: 1; /* Hacemos que las columnas ocupen el mismo espacio */
+    max-width: 45%; /* Limitamos el ancho máximo */
+    text-align: center; /* Centramos el contenido */
+    margin: 10px; /* Agregamos espacio entre las columnas */
+}
+
+.elementos,
+.elementos2 {
+    margin-bottom: 10px; /* Agregamos espacio entre los elementos */
+}
+
+img {
+    max-width: 100%; /* Hacemos que las imágenes sean responsivas */
+    height: auto;
+    cursor: pointer;
 }
 
 .blur {
@@ -50,4 +60,3 @@ img {
 display: flex; 
 justify-content: center;
 }
-
